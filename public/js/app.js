@@ -2,13 +2,10 @@ angular.module("contactsApp", ['ngRoute'])
     .config(function($routeProvider) {
         $routeProvider
             .when("/", {
-                templateUrl: "list.html",
-                controller: "ListController",
-                resolve: {
-                    contacts: function(Contacts) {
-                        return Contacts.getContacts();
-                    }
-                }
+                templateUrl: "home.html"
+            })
+            .when("/game", {
+                templateUrl: "game.html"
             })
             .when("/new/contact", {
                 controller: "NewContactController",
